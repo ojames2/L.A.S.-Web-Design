@@ -1,21 +1,14 @@
-// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all gallery images
-  const galleryImages = document.querySelectorAll(".gallery-img");
-
-  galleryImages.forEach(img => {
+  document.querySelectorAll(".gallery-img").forEach(img => {
     img.addEventListener("click", () => {
-      // Find the papers div right after the image
-      const papers = img.nextElementSibling;
-
-      // Toggle visibility
-      if (papers.classList.contains("hidden")) {
-        papers.classList.remove("hidden");
-        papers.setAttribute("aria-hidden", "false");
-      } else {
-        papers.classList.add("hidden");
-        papers.setAttribute("aria-hidden", "true");
+      console.log("Image clicked:", img); // Debug
+      const papers = img.parentElement.querySelector(".papers");
+      if (!papers) {
+        console.warn("No .papers div found for", img);
+        return;
       }
+      papers.classList.toggle("hidden");
+      papers.setAttribute("aria-hidden", papers.classList.contains("hidden") ? "true" : "false");
     });
   });
 });
