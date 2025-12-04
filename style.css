@@ -9,17 +9,17 @@ body {
 /* Gallery container */
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* 3 columns */
-  grid-auto-rows: 300px;                   /* each row is 300px tall */
+  grid-template-columns: repeat(3, 280px); /* 3 columns */
+  grid-auto-rows: 280px;                   /* each row is 300px tall */
   gap: 20px;                               /* spacing between items */
   justify-content: center;                 /* center the grid */
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 /* Each gallery item */
 .gallery-item {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   overflow: hidden; /* crop overflow if image is larger */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
