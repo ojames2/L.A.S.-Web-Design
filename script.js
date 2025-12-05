@@ -1,16 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".gallery-item").forEach(item => {
+  // Grab all gallery items
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  galleryItems.forEach(item => {
     const img = item.querySelector(".gallery-img");
     const papers = item.querySelector(".papers");
 
+    if (!img || !papers) {
+      console.warn("Missing .gallery-img or .papers in:", item);
+      return;
+    }
+
     img.addEventListener("click", () => {
-      if (!papers) {
-        console.warn("No .papers div found for", img);
-        return;
-      }
+      // Toggle hidden class
       papers.classList.toggle("hidden");
-      papers.setAttribute("aria-hidden", papers.classList.contains("hidden") ? "true" : "false");
+
+      // Update accessibility attribute
+      const isHidden = papers.classList.contains("hidden");
+      papers.setAttribute("aria-hidden", isHidden ? "true" : "false");
     });
   });
 });
+
 
