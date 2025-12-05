@@ -1,11 +1,21 @@
+// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".gallery-img").forEach(img => {
-    img.addEventListener("click", () => {
-      const papers = img.nextElementSibling;
-      if (papers) {
-        papers.classList.toggle("hidden");
-        papers.setAttribute("aria-hidden", papers.classList.contains("hidden") ? "true" : "false");
-      }
-    });
+  // Loop through each gallery item
+  document.querySelectorAll(".gallery-item").forEach(item => {
+    const img = item.querySelector(".gallery-img");   // clickable image
+    const box = item.querySelector(".text-box");      // hidden text box
+
+    if (img && box) {
+      img.addEventListener("click", () => {
+        // Toggle visibility
+        box.classList.toggle("hidden");
+
+        // Update accessibility attribute
+        box.setAttribute(
+          "aria-hidden",
+          box.classList.contains("hidden") ? "true" : "false"
+        );
+      });
+    }
   });
 });
