@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Grab all gallery items
+  // Select all gallery items
   const galleryItems = document.querySelectorAll(".gallery-item");
 
   galleryItems.forEach(item => {
@@ -12,10 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     img.addEventListener("click", () => {
-      // Toggle hidden class
       papers.classList.toggle("hidden");
-
-      // Update accessibility attribute
       const isHidden = papers.classList.contains("hidden");
       papers.setAttribute("aria-hidden", isHidden ? "true" : "false");
     });
