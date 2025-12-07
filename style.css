@@ -9,18 +9,13 @@ body {
 /* Gallery container */
 /* Grid layout for 3 x 2 structure */
 .gallery-container {
-  display: flex;
-  flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 10px;
-  justify-content: center;
-  margin: 20px auto;
-  max-width: 1200px;
-  max-width: 1000px;
-  margin: 40px auto;
+  grid-auto-rows: auto;
+  column-gap: 15px;   /* space between columns */
+  row-gap: 24px;      /* space between rows */
 }
+
 
 /* Each gallery item */
 .gallery-item {
@@ -57,10 +52,16 @@ body {
 }
 
 /* Header-style text inside text boxes */
+.text-box {
+  text-align: left;   /* left-align text */
+  padding: 8px;       /* optional: add breathing room */
+}
+
 .text-box h3 {
-  margin: 8px 0;
-  font-size: 1em;
-@@ -64,17 +51,14 @@ body {
+  margin: 6px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 /* Responsive behavior */
