@@ -52,16 +52,16 @@ body {
 }
 
 /* Header-style text inside text boxes */
+/* Text box (hidden by default) */
 .text-box {
-  text-align: left;   /* left-align text */
-  padding: 8px;       /* optional: add breathing room */
+  display: none;          /* all boxes hidden initially */
+  text-align: left;       /* left-align titles in a list */
+  padding: 8px;           /* breathing room */
 }
 
-.text-box h3 {
-  margin: 5px 0;
-  font-size: 16px;
-  line-height: 1.4;
-  font-weight: 600;
+/* Only show the text box when the parent has .open */
+.gallery-item.open .text-box {
+  display: block;
 }
 
 /* Responsive behavior */
