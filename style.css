@@ -46,17 +46,16 @@ body {
 }
 
 /* Text box (hidden by default) */
-/* Hide/show toggle */
-.hidden {
-  display: none;
+/* Text boxes are visible by default */
+.text-box {
+  display: block;
+  text-align: left;
+  padding: 8px;
 }
 
-/* Header-style text inside text boxes */
-/* Text box (hidden by default) */
-.text-box {
-  display: none;          /* all boxes hidden initially */
-  text-align: left;       /* left-align titles in a list */
-  padding: 8px;           /* breathing room */
+/* When .hidden is applied, hide the box */
+.text-box.hidden {
+  display: none;
 }
 
 /* Only show the text box when the parent has .open */
