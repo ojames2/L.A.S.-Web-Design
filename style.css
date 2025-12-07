@@ -23,7 +23,7 @@ body {
 
 /* Each gallery item */
 .gallery-item {
-  width: 300px;
+  width: auto;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -47,20 +47,20 @@ body {
 
 /* Text box (hidden by default) */
 /* Text boxes are visible by default */
+/* Text box hidden by default */
 .text-box {
-  display: block;
+  display: none;       /* fully removes it from layout */
   text-align: left;
   padding: 8px;
 }
 
-/* When .hidden is applied, hide the box */
+/* Show only when toggled */
 .text-box.hidden {
-  display: none;
+  display: none;       /* ensure hidden state collapses */
 }
 
-/* Only show the text box when the parent has .open */
-.gallery-item.open .text-box {
-  display: block;
+.text-box:not(.hidden) {
+  display: block;      /* visible when not hidden */
 }
 
 /* Responsive behavior */
