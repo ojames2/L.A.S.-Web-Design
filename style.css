@@ -46,10 +46,6 @@ body {
 }
 
 /* Text box (hidden by default) */
-@@ -50,12 +39,10 @@ body {
-  border-radius: 6px;
-}
-
 /* Hide/show toggle */
 .hidden {
   display: none;
