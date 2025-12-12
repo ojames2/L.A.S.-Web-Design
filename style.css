@@ -73,7 +73,7 @@ h3::before {
 }
 
 iframe {
-  zoom: 0.9;   /* shrink entire frame to 90% */
+  zoom: 0.6;   /* shrink entire frame to 90% */
   border: 1px solid #ccc;
 }
 
