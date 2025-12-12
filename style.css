@@ -48,6 +48,12 @@ body {
   font-size: 12px; /*Font Size of the Papers */
 }
 
+h3::before {
+  content: "• ";      /* bullet symbol */
+  color: #333;        /* bullet color */
+  font-weight: bold;  /* optional styling */
+}
+
 /* Show when JS removes .hidden */
 .text-box:not(.hidden) {
   display: block;
