@@ -72,9 +72,11 @@ h3::before {
   }
 }
 
-.weebly-section .custom-html-container {
-  width: 100% !important;   /* force full width */
-  max-width: 1200px;        /* or whatever matches your gallery */
-  margin: 0 auto;           /* keep it centered */
+iframe {
+  transform: scale(0.9);        /* zooms out to 90% */
+  transform-origin: top left;   /* anchor point for scaling */
+  width: 1111px;                /* iframe width adjusted for scale */
+  height: 777px;                /* iframe height adjusted for scale */
+  border: 1px solid #ccc;
 }
 
