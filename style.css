@@ -71,3 +71,10 @@ h3::before {
     grid-template-columns: 1fr;
   }
 }
+
+.weebly-section .custom-html-container {
+  width: 100% !important;   /* force full width */
+  max-width: 1200px;        /* or whatever matches your gallery */
+  margin: 0 auto;           /* keep it centered */
+}
+
