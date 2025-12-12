@@ -73,10 +73,7 @@ h3::before {
 }
 
 iframe {
-  transform: scale(0.9);        /* zooms out to 90% */
-  transform-origin: top left;   /* anchor point for scaling */
-  width: 1111px;                /* iframe width adjusted for scale */
-  height: 777px;                /* iframe height adjusted for scale */
+  zoom: 0.9;   /* shrink entire frame to 90% */
   border: 1px solid #ccc;
 }
 
