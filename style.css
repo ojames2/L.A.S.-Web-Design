@@ -55,10 +55,10 @@ h3::before {
 /* Featured Tile Code */
 
 .featured-tile {
-  grid-column: 1 / -1;
-  width: 100%;
-  padding: 30px 20px;
-  text-align: center;
+    grid-column: 1 / -1;
+    margin: 0 !important;
+    justify-self: center;
+    width: 100%;
 }
 
 .featured-tile h2 {
