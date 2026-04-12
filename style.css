@@ -26,9 +26,7 @@ body {
   width: 100%;          /* fills its grid cell */
   height: 220px;
   cursor: pointer;
-  border-radius: 6px;
   display: block;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease-in-out;
 }
 
